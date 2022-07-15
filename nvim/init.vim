@@ -13,6 +13,17 @@ set scrolloff=7
 "use y and p with the system clipboard
 set clipboard=unnamedplus
 
+" Ignore files
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+set wildignore+=*.next/*
+
+
 "==================================================================================
 "plugins
 "==================================================================================
@@ -107,13 +118,6 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-lua << EOF
-require('telescope').setup{
-   defaults = {
-	file_ignore_patterns = {"node_modules"}
-  },
-}
-EOF
 
 " Coc config
 " GoTo code navigation.
