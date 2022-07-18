@@ -90,6 +90,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " kyoz/purify 'jonathanfilip/vim-lucius'
 " Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
+
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 "Treesitter
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -157,6 +160,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'mattn/emmet-vim'
 
 call plug#end()
+
+" Color scheme
+colorscheme tokyonight
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
