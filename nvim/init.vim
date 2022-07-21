@@ -159,6 +159,10 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'jparise/vim-graphql' "GraphQL syntax
 " Plug 'mattn/emmet-vim'
 
+" File Tree
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+
 call plug#end()
 
 " Color scheme
