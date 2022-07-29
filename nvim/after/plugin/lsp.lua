@@ -25,7 +25,7 @@ require("nvim-lsp-installer").on_server_ready(function(server)
 			vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 			local opts = { buffer = bufnr }
 			vim.keymap.set("n", "<Leader>h", vim.lsp.buf.hover, opts)
-			vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, opts)
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 			vim.keymap.set("n", "<Leader>r", vim.lsp.buf.rename, opts)
 			local should_format = true
 			for _, value in pairs(has_formatter) do

@@ -42,4 +42,7 @@ use {
 use "williamboman/nvim-lsp-installer"
 
 use "jose-elias-alvarez/null-ls.nvim"
+use "windwp/nvim-autopairs"
 end)
+
+
