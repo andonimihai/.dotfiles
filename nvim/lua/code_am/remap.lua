@@ -16,3 +16,7 @@ nnoremap("<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 
 -- file manager mapppins(neo-tree)
 nnoremap("<leader>b", "<cmd>Neotree filesystem reveal toggle left<cr>")
+
+-- navigation on buffers
+nnoremap("<leader>j", ":bp<CR>")
+nnoremap("<leader>k", ":bn<CR>")
