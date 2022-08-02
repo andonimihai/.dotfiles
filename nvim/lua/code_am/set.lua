@@ -1,6 +1,6 @@
 vim.opt.guicursor = ""
 
-vim.opt.number= true
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 2
@@ -32,8 +32,8 @@ vim.api.nvim_create_autocmd("InsertEnter", { command = "set norelativenumber", p
 vim.api.nvim_create_autocmd("InsertLeave", { command = "set relativenumber", pattern = "*" })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-	command = "lua vim.lsp.buf.formatting_sync(nil, 1000)",
-	pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml",
+  command = "lua vim.lsp.buf.formatting_sync(nil, 1000)",
+  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml",
 })
 
 vim.cmd "sign define DiagnosticSignError text=● texthl=DiagnosticSignError"
