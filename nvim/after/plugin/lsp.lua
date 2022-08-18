@@ -5,6 +5,7 @@ local servers = {
   "sumneko_lua",
   "tailwindcss",
   "tsserver",
+  "prismals",
 }
 local has_formatter = { "gopls", "tsserver" }
 for _, name in pairs(servers) do
