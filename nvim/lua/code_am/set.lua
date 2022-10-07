@@ -36,6 +36,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml",
 })
 
+vim.diagnostic.config({ virtual_text = false })
 vim.cmd "sign define DiagnosticSignError text=● texthl=DiagnosticSignError"
 vim.cmd "sign define DiagnosticSignWarn text=● texthl=DiagnosticSignWarn"
 vim.cmd "sign define DiagnosticSignInfo text=● texthl=DiagnosticSignInfo"

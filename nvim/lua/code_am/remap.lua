@@ -21,3 +21,6 @@ nnoremap("<leader>b", "<cmd>Neotree filesystem reveal toggle left<cr>")
 nnoremap("<leader>j", ":bp<CR>")
 nnoremap("<leader>k", ":bn<CR>")
 nnoremap("<leader>q", ":bprevious<CR>:bdelete #<CR>")
+
+-- navigation on buffers
+nnoremap("<leader>xx", "<cmd>TroubleToggle<cr>")

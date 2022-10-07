@@ -46,4 +46,5 @@ return require('packer').startup(function(use)
   use "windwp/nvim-autopairs"
 
   use "numToStr/Comment.nvim"
+  use "folke/trouble.nvim"
 end)
