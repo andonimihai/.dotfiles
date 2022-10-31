@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd("InsertLeave", { command = "set relativenumber", pat
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   command = "lua vim.lsp.buf.formatting_sync(nil, 1000)",
-  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml",
+  pattern = "*.cpp,*.css,*.go,*.h,*.html,*.js,*.json,*.jsx,*.lua,*.md,*.py,*.rs,*.ts,*.tsx,*.yaml,*.prisma,*.cjs,*.mjs",
 })
 
 vim.diagnostic.config({ virtual_text = false })
