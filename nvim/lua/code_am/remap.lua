@@ -22,5 +22,9 @@ nnoremap("<leader>j", ":bp<CR>")
 nnoremap("<leader>k", ":bn<CR>")
 nnoremap("<leader>q", ":bprevious<CR>:bdelete #<CR>")
 
--- navigation on buffers
+-- show/hide issue panel
 nnoremap("<leader>xx", "<cmd>TroubleToggle<cr>")
+
+-- better half-page naviation
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")

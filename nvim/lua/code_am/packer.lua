@@ -1,7 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+vim.cmd.packadd('packer.nvim')
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -16,13 +16,9 @@ return require('packer').startup(function(use)
   use 'MunifTanjim/nui.nvim'
   use { 'nvim-neo-tree/neo-tree.nvim', branch = "v2.x" }
 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
-  use 'nvim-treesitter/nvim-treesitter-context'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-  use { 'glepnir/dashboard-nvim' }
+  use 'nvim-treesitter/nvim-treesitter-context'
 
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
