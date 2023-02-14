@@ -123,3 +123,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [[ -s "/Users/mihai/.gvm/scripts/gvm" ]] && source "/Users/mihai/.gvm/scripts/gvm"
+
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
