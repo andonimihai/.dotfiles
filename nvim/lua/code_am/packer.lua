@@ -13,7 +13,8 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   use 'nvim-telescope/telescope.nvim'
-  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
   use 'MunifTanjim/nui.nvim'
   use { 'nvim-neo-tree/neo-tree.nvim', branch = "v2.x" }
@@ -22,7 +23,7 @@ return require('packer').startup(function(use)
 
   use 'nvim-treesitter/nvim-treesitter-context'
 
-  
+
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -51,4 +52,8 @@ return require('packer').startup(function(use)
 
   use "numToStr/Comment.nvim"
   use "folke/trouble.nvim"
+
+  -- copilot
+  use "github/copilot.vim"
+
 end)

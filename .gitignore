@@ -6,4 +6,4 @@ gh
 node_modules
 containers
 stripe
-./nvim/plugin
+packer_compiled.lua
