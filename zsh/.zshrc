@@ -126,3 +126,5 @@ export NVM_DIR="$HOME/.nvm"
 
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
