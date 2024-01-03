@@ -6,3 +6,4 @@ gh
 node_modules
 containers
 stripe
+./nvim/plugin
