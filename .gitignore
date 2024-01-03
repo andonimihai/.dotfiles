@@ -3,3 +3,6 @@ iterm2
 yarn
 filezilla
 gh
+node_modules
+containers
+stripe
