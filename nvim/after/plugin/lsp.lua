@@ -2,16 +2,14 @@ require("mason").setup()
 require("mason-lspconfig").setup {
   ensure_installed = { "bashls", "cssls", "lua_ls", "tailwindcss", "tsserver", "prismals" },
 }
-
-
 local servers = {
   "bashls",
   "cssls",
   "gopls",
   "tailwindcss",
-  "tsserver",
   "prismals",
 }
+
 local lspconfig = require 'lspconfig'
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -52,4 +50,38 @@ lspconfig.lua_ls.setup {
       },
     },
   },
+}
+
+local function filter(arr, fn)
+  if type(arr) ~= "table" then
+    return arr
+  end
+
+  local filtered = {}
+  for k, v in pairs(arr) do
+    if fn(v, k, arr) then
+      table.insert(filtered, v)
+    end
+  end
+
+  return filtered
+end
+
+local function filterDTS(value)
+  return string.match(value.targetUri, '%.d.ts') == nil
+end
+
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  handlers = {
+    ['textDocument/definition'] = function(err, result, method, ...)
+      if vim.tbl_islist(result) and #result > 1 then
+        local filtered_result = filter(result, filterDTS)
+        return vim.lsp.handlers['textDocument/definition'](err, filtered_result, method, ...)
+      end
+
+      vim.lsp.handlers['textDocument/definition'](err, result, method, ...)
+    end }
 }
