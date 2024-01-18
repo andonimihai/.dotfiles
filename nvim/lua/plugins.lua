@@ -23,7 +23,10 @@ return {
 
 
   'nvim-telescope/telescope.nvim',
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+  { 'nvim-telescope/telescope-fzf-native.nvim',
+    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+
+
   'MunifTanjim/nui.nvim',
   { 'nvim-neo-tree/neo-tree.nvim',              branch = "v3.x" },
 
