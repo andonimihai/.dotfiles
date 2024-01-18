@@ -16,7 +16,7 @@ return {
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
   "hrsh7th/nvim-cmp",
-  
+
   "L3MON4D3/LuaSnip",
   "saadparwaiz1/cmp_luasnip",
   "hrsh7th/cmp-emoji",
@@ -24,10 +24,8 @@ return {
 
   'nvim-telescope/telescope.nvim',
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
-
-
   'MunifTanjim/nui.nvim',
-  { 'nvim-neo-tree/neo-tree.nvim', branch = "v3.x" },
+  { 'nvim-neo-tree/neo-tree.nvim',              branch = "v3.x" },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -50,6 +48,7 @@ return {
           "yaml",
           "tsx",
           "typescript",
+          "php"
         },
       }
     end

@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = { "bashls", "cssls", "lua_ls", "tailwindcss", "tsserver", "prismals" },
+  ensure_installed = { "bashls", "cssls", "lua_ls", "tailwindcss", "tsserver", "prismals", "phpactor" },
 }
 local servers = {
   "bashls",
@@ -8,6 +8,7 @@ local servers = {
   "gopls",
   "tailwindcss",
   "prismals",
+  "phpactor"
 }
 
 local lspconfig = require 'lspconfig'
