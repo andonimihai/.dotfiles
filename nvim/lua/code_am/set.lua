@@ -41,3 +41,9 @@ vim.cmd "sign define DiagnosticSignError text=● texthl=DiagnosticSignError"
 vim.cmd "sign define DiagnosticSignWarn text=● texthl=DiagnosticSignWarn"
 vim.cmd "sign define DiagnosticSignInfo text=● texthl=DiagnosticSignInfo"
 vim.cmd "sign define DiagnosticSignHint text=● texthl=DiagnosticSignHint"
+
+
+vim.g.copilot_assume_mapped = true
+
+
+vim.api.nvim_set_keymap('i', '<C-/>', 'copilot#Accept("CR")', { expr = true, silent = true })

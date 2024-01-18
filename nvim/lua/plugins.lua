@@ -16,14 +16,15 @@ return {
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
   "hrsh7th/nvim-cmp",
-  
+
   "L3MON4D3/LuaSnip",
   "saadparwaiz1/cmp_luasnip",
   "hrsh7th/cmp-emoji",
 
 
   'nvim-telescope/telescope.nvim',
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+  { 'nvim-telescope/telescope-fzf-native.nvim',
+    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
 
 
   'MunifTanjim/nui.nvim',
