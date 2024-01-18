@@ -1,3 +1,5 @@
+local util = require 'lspconfig.util'
+
 require("mason").setup()
 require("mason-lspconfig").setup {
   ensure_installed = { "bashls", "cssls", "lua_ls", "tailwindcss", "tsserver", "prismals" },
@@ -71,10 +73,10 @@ local function filterDTS(value)
   return string.match(value.targetUri, '%.d.ts') == nil
 end
 
-
 lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  root_dir = util.root_pattern('.git'),
   handlers = {
     ['textDocument/definition'] = function(err, result, method, ...)
       if vim.tbl_islist(result) and #result > 1 then
@@ -83,5 +85,6 @@ lspconfig.tsserver.setup {
       end
 
       vim.lsp.handlers['textDocument/definition'](err, result, method, ...)
-    end }
+    end
+  }
 }
