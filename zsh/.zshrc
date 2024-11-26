@@ -8,6 +8,10 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Setup the VOLTA environment
+export VOLTA_HOME=$HOME/.volta
+export PATH=$VOLTA_HOME/bin:$PATH
+
 ZSH_DISABLE_COMPFIX="true"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -128,4 +132,10 @@ export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.oh-my-zsh/custom/themes/powerlevel10k
+
+
+
+export PATH="/home/mihai/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/mihai/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
